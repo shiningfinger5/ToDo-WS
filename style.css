@@ -1,14 +1,35 @@
 h1{
+  -webkit-text-stroke: 1px black;
+  color:yellow
+  
+}
+
+
+button{
+    -webkit-text-stroke: 1px black;
+  color:teal;
+  background-color: white;
+  font-weight: bold;
+}
+
+
+li{
+   -webkit-text-stroke: 1px black;
   color:blue
 }
 
-button{
-  color:yellow;
-  background-color: black
-}
 
-li{
-  color:red;
-  width: 200px;
-}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightblue;
+  }
 
+  
+body {
+  background-image: url(/waves.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 1200px 100px;
+}

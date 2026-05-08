@@ -1,8 +1,8 @@
 let toDoList =[];
 
 function addTask(){
-  let inputElement = document.querySelector("#myInput");
-  let taskText = inputElement.value;
+  let taskInput = document.querySelector("#myInput");
+  let taskText = taskInput.value;
   toDoList.push(taskText);
 
   let newTask = document.createElement("li");
@@ -11,5 +11,21 @@ function addTask(){
   let list = document.querySelector("#myList");
   list.appendChild(newTask);
 
-  inputElement.value = "";
+
+  newTask.addEventListener("click", taskCompleted);
+  function taskCompleted(){
+   newTask.style.textDecoration = "line-through";
+  };
+
+  
+  let removeButton = document.createElement("button");
+  removeButton.textContent = "DELETE";
+
+  removeButton.addEventListener("click", function(){
+  newTask.remove();
+  })
+  
+  newTask.appendChild(removeButton);
+    
+  taskInput.value = "";
 }
